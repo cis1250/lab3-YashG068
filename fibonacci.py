@@ -30,4 +30,6 @@ if num.isdigit(): # check if the input only has digits (0-9)
 else: # if the input is not a number
     print("Please enter a positive integer.")
 
+
+# Your code should prompt for input again after an invalid input -1
   
