@@ -8,28 +8,34 @@
 
 # Fibonacci Sequence Exercise
 # Asking the user how many terms they want
-num = input("Enter how many terms you want: ")
+def get_postive_int();
+
+While True:  # keep asking until we get a good number
+    s = input("Enter how many terms you want: ")
+    if s.isdigit():      #Checks: only digits like "5", "12"
+            n = int(s)
+            if n > 0:  # must be positive (1, 2, 3, ...)
+                return n
+        print("Please enter a positive integer.") # show error and ask again
+
+def generate_fibonacci(n):
+    seq = []     # this will store the numbers
+    a = 0           # first Fibonacci number
+    b = 1
+    for _ in range(n):
+        seq.append(a)
+        a, b = b, a + b
+    return seq
+
+def print_sequence(seq):
+    # print the sequence in a simple, readable way
+    print("Fibonacci sequence:", end=" ")
+    for x in seq:
+        print(x, end=" ")
+    print()  # new line
 
 # check if input is a number 
-if num.isdigit(): # check if the input only has digits (0-9)
-    num = int(num)# making it a whole number using int
-
-    # check if number is positive
-    if num > 0:
-              # first two numbers of fibonacci
-        a, b = 0, 1
-      # using the for loop to print fibonacci numbers
-        for i in range(num):
-          # print the currect number 
-            print(a, end=" ")
-          # updating the vaule for the next numbers
-            a, b = b, a + b
-        print()  # goes to a new line at the end
-    else: # if the number is not postive 
-        print("Please enter a positive integer.")
-else: # if the input is not a number
-    print("Please enter a positive integer.")
 
 
-# Your code should prompt for input again after an invalid input -1
+
   
